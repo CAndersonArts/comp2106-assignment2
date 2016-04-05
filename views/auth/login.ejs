@@ -6,8 +6,9 @@
     <% if (messages.length > 0) { %>
         <div class="alert alert-danger"><%= messages %></div>
     <% } %>
-
+    
     <form method="post" action="/auth/login">
+    <div class="row">
         <fieldset class="input-field col s12">
             <label for="username">Username: *</label>
             <input name="username" id="username" required />
@@ -16,11 +17,21 @@
             <label for="password">Password: *</label>
             <input name="password" id="password" type="password" required />
         </fieldset>
-
+        </div>
+        
+        <div class="row">
         <button class="btn red darken-4 waves-effect waves-light white-text">Login</button>
-        <a href="/auth/github" title="Login with GitHub" class="valign-wrapper">
-            <img src="/images/github.png" alt="GitHub" class="valign" />
+        </div>
+        <div class="row">
+        <a href="/auth/github" title="Login with GitHub">
+            <img src="/images/github.png" alt="GitHub"/>
         </a>
+        </div>
+        <div class="row">
+        <a href="/auth/facebook" title="Login with Facebook">
+            <img src="/images/facebook.png" alt="Facebook"/>
+        </a>
+        </div>
         <hr />
         Need access?  <a href="/auth/register" title="Register">Register</a>
     </form>

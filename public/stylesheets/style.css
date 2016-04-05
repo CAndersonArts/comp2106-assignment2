@@ -44,25 +44,6 @@ p {
   .parallax-container .section {
     width: 100%;
   }
-  
-  #welcome {
-      margin-top: 250px;
-      text-transform: uppercase;
-      font-weight: 700;
-      text-shadow: -1px 1px 0px rgba(0,0,0,0.9);
-  }
-  
-  #caa-welcome {
-      background-color: rgba(0,0,0,0.4);
-  }
-  
-  #skills h1.header {
-      text-shadow: -1px 1px 0px rgba(0,0,0,0.9);
-  }
-  
-  #skill-row {
-      background-color: rgba(0,0,0,0.3);
-  }
 
 @media only screen and (max-width : 992px) {
   #index-banner .section {

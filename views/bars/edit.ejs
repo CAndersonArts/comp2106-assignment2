@@ -3,38 +3,42 @@
 <main class="container">
     <h1>Bar Details</h1>
     <form method="post" action="<%= bar._id %>">
+    <div class="row">
         <fieldset class="input-field col s12">
-            <label for="title">Title: *</label>
             <input name="title" id="title" required value="<%= bar.title %>" />
+            <label for="title">Title: *</label>           
         </fieldset>
         <fieldset class="input-field col s12">
-            <label for="location">Location: *</label>
             <input name="location" id="location" required value="<%= bar.location %>" />
+            <label for="location">Location: *</label>
             </input>
         </fieldset>
         <fieldset class="input-field col s12">
-            <label for="city">City: *</label>
             <input name="city" id="city" required value="<%= bar.city %>" />
+            <label for="city">City: *</label>
             </input>
         </fieldset>
         <fieldset class="input-field col s12">
-            <label for="website">Website: *</label>
             <input name="website" id="website" required value="<%= bar.website %>" />
+            <label for="website">Website: *</label>
             </input>
         </fieldset>
         <fieldset class="input-field col s12">
-            <label for="founded">Founded: *</label>
             <input name="founded" id="founded" required value="<%= bar.founded %>" />
+            <label for="founded">Founded: *</label>
             </input>
         </fieldset>
         <div>
             <%= bar.created %>
         </div>
+        </div>
+        <div class="row">
         <button class="btn green darken-4 waves-effect waves-light white-text">Save</button>
 
         <a href="/bars/delete/<%= bar._id %>" title="Delete" class="confirmation">
             <button class="btn red darken-4 waves-effect waves-light white-text" type="button">Delete</button>
         </a>
+        </div>
     </form>
 </main>
 
