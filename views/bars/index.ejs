@@ -1,18 +1,30 @@
 <%- include ../partials/header.ejs %>
 
 <main class="container">
-    <h1>Bars</h1>
+    <h1>Edit Bars</h1>
 
-    <a href="/bars/add" title="Add Bar">Add a new Bar</a>
-
-    <ul class="list-group">
+    <table class="responsive striped">
+    <thead>
+        <tr>
+            <th data-field="title">Name</th>
+            <th data-field="location">Location</th>
+            <th data-field="city">City</th>
+            <th data-field="website">Website</th>
+            <th data-field="founded">Founded</th>
+        </tr>
+    </thead>
+    <tbody>
         <% for (var i = 0; i < bars.length; i++) { %>
-            <li class="list-group-item">
-                <a href="/bars/<%= bars[i]._id%>" title="Read More">
-                    <%= bars[i].title %></a>
-            </li>
-        <% } %>
-    </ul>
+          <tr>
+            <td><a href="/bars/<%= bars[i]._id%>"><%= bars[i].title %></a></td>
+            <td><%= bars[i].location %></td>
+            <td><%= bars[i].city %></td>
+            <td><a href="<%= bars[i].website %>"><%= bars[i].website %></a></td>
+            <td><%= bars[i].founded %></td>
+          </tr>
+        <% } %>  
+        </tbody>
+      </table>
 </main>
 
 <%- include ../partials/footer.ejs %>
