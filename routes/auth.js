@@ -110,7 +110,7 @@ router.get('/logout', function(req, res, next) {
     res.redirect('/');
 });
 
-passport.use('facebook', new FacebookStrategy({
+passport.use(new FacebookStrategy({
   clientID        : fbConfig.appID,
   clientSecret    : fbConfig.appSecret,
   callbackURL     : fbConfig.callbackUrl
@@ -158,12 +158,12 @@ passport.use('facebook', new FacebookStrategy({
 
 // route for facebook authentication and login
 // different scopes while logging in
-router.get('/facebook', 
+router.get('auth/facebook', 
   passport.authenticate('facebook', { scope : 'email' }
 ));
  
 // handle the callback after facebook has authenticated the user
-router.get('/facebook/callback',
+router.get('auth/facebook/callback',
   passport.authenticate('facebook', {
     failureRedirect : '/auth/login',
     function(req, res) {
