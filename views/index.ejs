@@ -4,18 +4,34 @@
     <h1><%= title %></h1>
 </div>
 <div class="row"> 
-    <ul class="list-group">
+    <table class="responsive striped">
+        <thead>
+          <tr>
+              <th data-field="title">Name</th>
+              <th data-field="location">Location</th>
+              <th data-field="city">City</th>
+              <th data-field="website">Website</th>
+              <th data-field="founded">Founded</th>
+          </tr>
+        </thead>
+
+        <tbody>
         <% for (var i = 0; i < bars.length; i++) { %>
-            <li class="list-group-item">
-                    <%= bars[i].title %>
-            </li>
-        <% } %>
-    </ul>
+          <tr>
+            <td><%= bars[i].title %></td>
+            <td><%= bars[i].location %></td>
+            <td><%= bars[i].city %></td>
+            <td><a href="<%= bars[i].website %>"><%= bars[i].website %></a></td>
+            <td><%= bars[i].founded %></td>
+          </tr>
+        <% } %>  
+        </tbody>
+      </table>
 </div>
-    <button class="btn red darken-4 waves-effect waves-light white-text">
-    <a href="/auth/login" title="Login">Login</a></button>
+    <a href="/auth/login" title="Login"><button class="btn red darken-4 waves-effect waves-light white-text">
+    Login</button></a>
     or
-    <button class="btn indigo darken-2 waves-effect waves-light white-text"> 
-    <a href="/auth/register" title="Register">Register</a></button>
+    <a href="/auth/register" title="Register"><button class="btn indigo darken-2 waves-effect waves-light white-text"> 
+    Register</button></a>
 </div>
 <%- include partials/footer.ejs %>

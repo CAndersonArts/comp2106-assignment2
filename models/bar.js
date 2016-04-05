@@ -15,7 +15,15 @@ var barSchema = new mongoose.Schema({
         type: String,
         default: ''
     },
+    city: {
+        type: String,
+        default: ''
+    },
     website: {
+        type: String,
+        default: ''
+    },
+    founded: {
         type: String,
         default: ''
     }

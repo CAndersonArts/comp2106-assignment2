@@ -1,6 +1,6 @@
 <%- include ../partials/header.ejs %>
 
-<main>
+<main class="container">
     <h1>Bar Details</h1>
     <form method="post" action="add">
         <fieldset class="input-field col s12">
@@ -9,12 +9,21 @@
         </fieldset>
         <fieldset class="input-field col s12">
             <label for="location">Location: *</label>
-            <textarea name="location" id="location" required></textarea>
+            <input name="location" id="location" required></input>
+        </fieldset>
+        <fieldset class="input-field col s12">
+            <label for="city">City: *</label>
+            <input name="city" id="city" required></input>
         </fieldset>
         <fieldset class="input-field col s12">
             <label for="website">Website: *</label>
-            <textarea name="website" id="website" required></textarea>
+            <input name="website" id="website" required></input>
         </fieldset>
+        <fieldset class="input-field col s12">
+            <label for="founded">Founded: *</label>
+            <input name="founded" id="founded" required></input>
+        </fieldset>
+        
         <button class="btn red darken-4 waves-effect waves-light white-text">Save</button>
     </form>
 </main>

@@ -9,13 +9,23 @@
         </fieldset>
         <fieldset class="input-field col s12">
             <label for="location">Location: *</label>
-            <textarea name="location" id="location" required><%= bar.location %>
-            </textarea>
+            <input name="location" id="location" required value="<%= bar.location %>" />
+            </input>
         </fieldset>
         <fieldset class="input-field col s12">
-            <label for="website">website: *</label>
-            <textarea name="website" id="website" required><%= bar.website %>
-            </textarea>
+            <label for="city">City: *</label>
+            <input name="city" id="city" required value="<%= bar.city %>" />
+            </input>
+        </fieldset>
+        <fieldset class="input-field col s12">
+            <label for="website">Website: *</label>
+            <input name="website" id="website" required value="<%= bar.website %>" />
+            </input>
+        </fieldset>
+        <fieldset class="input-field col s12">
+            <label for="founded">Founded: *</label>
+            <input name="founded" id="founded" required value="<%= bar.founded %>" />
+            </input>
         </fieldset>
         <div>
             <%= bar.created %>
