@@ -7,7 +7,7 @@ var Account = require('../models/account');
 var configDb = require('../config/db.js');
 var gitHub = require('passport-github2');
 var FacebookStrategy = require('passport-facebook').Strategy;
-var fbConfig = require('../config/db.js');
+var fbConfig = require('../config/fb.js');
 
 passport.serializeUser(function(user, done) {
     done(null, user.id);
@@ -165,8 +165,10 @@ router.get('/facebook',
 // handle the callback after facebook has authenticated the user
 router.get('/facebook/callback',
   passport.authenticate('facebook', {
-    successRedirect : '/bars',
-    failureRedirect : '/auth/login'
+    failureRedirect : '/auth/login',
+    function(req, res) {
+        res.redirect('/bars');
+    }
   })
 );
 
