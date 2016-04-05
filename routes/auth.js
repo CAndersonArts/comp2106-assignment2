@@ -158,12 +158,12 @@ passport.use(new FacebookStrategy({
 
 // route for facebook authentication and login
 // different scopes while logging in
-router.get('auth/facebook', 
+router.get('/facebook', 
   passport.authenticate('facebook', { scope : 'email' }
 ));
  
 // handle the callback after facebook has authenticated the user
-router.get('auth/facebook/callback',
+router.get('/facebook/callback',
   passport.authenticate('facebook', {
     failureRedirect : '/auth/login',
     function(req, res) {
