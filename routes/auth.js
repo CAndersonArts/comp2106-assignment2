@@ -163,8 +163,8 @@ router.get('/facebook',
 ));
  
 // handle the callback after facebook has authenticated the user
-router.get('/facebook/callback',
-  passport.authenticate('facebook', {
+router.get('/auth/facebook/callback',
+  passport.authenticate('/auth/facebook', {
     failureRedirect : '/auth/login',
     function(req, res) {
         res.redirect('/bars');
