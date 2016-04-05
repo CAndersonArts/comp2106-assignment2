@@ -7,7 +7,7 @@ var Account = require('../models/account');
 var configDb = require('../config/db.js');
 var gitHub = require('passport-github2');
 var FacebookStrategy = require('passport-facebook').Strategy;
-var fbConfig = require('../config/fb.js');
+var fbConfig = require('../config/db.js');
 
 passport.serializeUser(function(user, done) {
     done(null, user.id);
