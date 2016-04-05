@@ -1,0 +1,22 @@
+<%- include ../partials/header.ejs %>
+
+<main>
+    <h1>Bar Details</h1>
+    <form method="post" action="add">
+        <fieldset class="input-field col s12">
+            <label for="title">Title: *</label>
+            <input name="title" id="title" required />
+        </fieldset>
+        <fieldset class="input-field col s12">
+            <label for="location">Location: *</label>
+            <textarea name="location" id="location" required></textarea>
+        </fieldset>
+        <fieldset class="input-field col s12">
+            <label for="website">Website: *</label>
+            <textarea name="website" id="website" required></textarea>
+        </fieldset>
+        <button class="btn red darken-4 waves-effect waves-light white-text">Save</button>
+    </form>
+</main>
+
+<%- include ../partials/footer.ejs %>

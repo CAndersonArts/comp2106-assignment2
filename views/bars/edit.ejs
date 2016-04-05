@@ -1,0 +1,31 @@
+<%- include ../partials/header.ejs %>
+
+<main class="container">
+    <h1>Bar Details</h1>
+    <form method="post" action="<%= bar._id %>">
+        <fieldset class="input-field col s12">
+            <label for="title">Title: *</label>
+            <input name="title" id="title" required value="<%= bar.title %>" />
+        </fieldset>
+        <fieldset class="input-field col s12">
+            <label for="location">Location: *</label>
+            <textarea name="location" id="location" required><%= bar.location %>
+            </textarea>
+        </fieldset>
+        <fieldset class="input-field col s12">
+            <label for="website">website: *</label>
+            <textarea name="website" id="website" required><%= bar.website %>
+            </textarea>
+        </fieldset>
+        <div>
+            <%= bar.created %>
+        </div>
+        <button class="btn green darken-4 waves-effect waves-light white-text">Save</button>
+
+        <a href="/bars/delete/<%= bar._id %>" title="Delete" class="confirmation">
+            <button class="btn red darken-4 waves-effect waves-light white-text" type="button">Delete</button>
+        </a>
+    </form>
+</main>
+
+<%- include ../partials/footer.ejs %>

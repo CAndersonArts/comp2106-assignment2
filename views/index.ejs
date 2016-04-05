@@ -1,11 +1,21 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
+<%- include partials/header.ejs %>
+<div class="container">
+<div class="row">
     <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
-</html>
+</div>
+<div class="row"> 
+    <ul class="list-group">
+        <% for (var i = 0; i < bars.length; i++) { %>
+            <li class="list-group-item">
+                    <%= bars[i].title %>
+            </li>
+        <% } %>
+    </ul>
+</div>
+    <button class="btn red darken-4 waves-effect waves-light white-text">
+    <a href="/auth/login" title="Login">Login</a></button>
+    or
+    <button class="btn indigo darken-2 waves-effect waves-light white-text"> 
+    <a href="/auth/register" title="Register">Register</a></button>
+</div>
+<%- include partials/footer.ejs %>

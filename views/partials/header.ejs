@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!--Import materialize.css and style.css-->
+    <link href="/stylesheets/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="/stylesheets/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    
+  </head>
+  <body>
+  <div class="navbar-fixed">
+    <nav class="indigo darken-2" role="navigation">
+        <ul class="left hide-on-med-and-down">
+            <li><a href="/" title="Home">Home</a></li>
+            <li><a href="/bars">Admin</a></li>
+            <li><a href="/auth/logout">Logout</a></li>
+        </ul>
+
+        <ul id="nav-mobile" class="side-nav indigo">
+            <li><a class="white-text" href="/" title="Home">Home</a></li>
+            <li><a class="white-text" href="/bars">Admin</a></li>
+            <li><a class="white-text" href="/auth/logout">Logout</a></li>  
+        </ul>
+        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>
+  </div>

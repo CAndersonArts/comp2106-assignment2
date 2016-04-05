@@ -1,8 +1,91 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+/* Custom Stylesheet */
+@font-face {
+	font-family: IndieRock;  
+	src: url(../font/IndieRock.ttf);  
+	font-weight: normal;  
 }
 
-a {
-  color: #00B7FF;
+@font-face {
+	font-family: Futura;  
+	src: url(../font/FuturaMedium.ttf);  
+	font-weight: normal;  
+}
+
+
+body {
+    font-family: Futura, Arial, Helvetica, sans-serif;
+}
+
+nav ul a,
+nav .brand-logo {
+  color: #fff;
+  font-family: IndieRock, Arial, Helvetica, sans-serif;
+}
+
+h1 {
+     font-family: IndieRock, Arial, Helvetica, sans-serif;
+}
+
+p {
+  line-height: 2rem;
+}
+
+.button-collapse {
+  color: #fff;
+}
+
+.parallax-container {
+  min-height: 670px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+  .parallax-container .section {
+    width: 100%;
+  }
+  
+  #welcome {
+      margin-top: 250px;
+      text-transform: uppercase;
+      font-weight: 700;
+      text-shadow: -1px 1px 0px rgba(0,0,0,0.9);
+  }
+  
+  #caa-welcome {
+      background-color: rgba(0,0,0,0.4);
+  }
+  
+  #skills h1.header {
+      text-shadow: -1px 1px 0px rgba(0,0,0,0.9);
+  }
+  
+  #skill-row {
+      background-color: rgba(0,0,0,0.3);
+  }
+
+@media only screen and (max-width : 992px) {
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}
+
+.card-title {
+    text-shadow: -1px -1px 0px rgba(255,255,255,.9);
 }
