@@ -131,7 +131,7 @@ passport.use(new FacebookStrategy({
  
           // if the user is found, then log them in
           if (account) {
-            return done(null, user); // user found, return that user
+            return done(null, account); // user found, return that user
           } else {
             // if there is no user found with that facebook id, create them
             var newUser = new Account();
